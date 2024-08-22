@@ -67,7 +67,15 @@ let sum = 0;
 // FASE DI RECUPERO DATI
 // -chiedo all'utente su quale risultato scommette per vincere ed il numero con
 // cui gioca
-const userChoice = prompt('Scegli pari o dispari?').trim();
-const userNum = prompt('Scegli il numero da 1 a cinque con cui vuoi giocare?').trim();
+const userChoice = prompt('Scegli pari o dispari?', 'pari').trim();
+let userNum;
+do {
+  userNum = parseInt(prompt('Scegli il numero da 1 a 5 con cui vuoi giocare?').trim());
+} while (userNum < 1 || userNum > 5);
+
+// FASE DI ELABORAZIONE
+// - sommo i due numeri della partita in sum
+sum = cpuNum + userNum;
+console.log(sum);
 
 

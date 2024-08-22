@@ -72,10 +72,26 @@ let userNum;
 do {
   userNum = parseInt(prompt('Scegli il numero da 1 a 5 con cui vuoi giocare?').trim());
 } while (userNum < 1 || userNum > 5);
+console.log(userNum);
 
 // FASE DI ELABORAZIONE
-// - sommo i due numeri della partita in sum
+// -sommo i due numeri della partita in sum
 sum = cpuNum + userNum;
 console.log(sum);
+
+// -determino se la proprietà pari o dispari della somma
+let sumType;
+sum % 2 == 0 ? sumType = 'pari' : sumType = 'dispari'
+// -determino se vince l'utente verificando se la somma possiede
+// la proprietà stabilita dall'utente
+const winner = userChoice == sumType ? 'utente' : 'CPU';
+
+// FASE DI PRESENTAZIONE DATI
+// -mostro il vincitore in console
+console.log(winner);
+
+
+
+
 
 

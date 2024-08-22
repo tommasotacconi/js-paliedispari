@@ -62,3 +62,9 @@ Dichiariamo chi ha vinto.
 // costruita
 cpuNum = getRandomNum(1, 5, true);
 console.log(cpuNum);
+
+// FASE DI RECUPERO DATI
+// -chiedo all'utente su quale risultato scommette per vincere ed il numero con
+// cui gioca
+const userChoice = prompt('Scegli pari o dispari?').trim();
+const userNum = prompt('Scegli il numero da 1 a cinque con cui vuoi giocare?').trim();

@@ -1,5 +1,5 @@
 // FUNCTIONS
-// funzione che inverte una parola, ovvero la scrive al contrario
+// inverte una parola, ovvero la scrive al contrario
 function mirrorWord (word) {
   let mirroredWord = '';
 
@@ -11,12 +11,20 @@ function mirrorWord (word) {
   return mirroredWord;
 }
 
+// genera un numero tra min a max, con max incluso o escluso a seconda
+// che il terzo parametro sia rispettivamente true o false
+function getRandomNum (min, max, isMaxIncluded) {
+  if (isMaxIncluded) max++;
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+
 /* Palindroma
 Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma
  */
 
-// FASE DI PREPARAZIONE
+/* // FASE DI PREPARAZIONE
 // -preparo una variabile che di tipo booleano che risponde alla domanda
 // -"la parola è palindroma?"
 let isPalindrome = false
@@ -38,7 +46,7 @@ if (mirroredUserWord == userWord) isPalindrome = true;
 //FASE DI PRESENTAZIONE DATI
 // -stampo il risultato in console
 console.log(isPalindrome);
-
+ */
 
 
 /* Pari e Dispari
@@ -48,3 +56,9 @@ Sommiamo i due numeri
 Stabiliamo se la somma dei due numeri è pari o dispari(usando una funzione)
 Dichiariamo chi ha vinto.
  */
+
+// FASE DI PREPARAZIONE
+// -preparo la giocata del computer sfruttando la funzione precedentemente
+// costruita
+cpuNum = getRandomNum(1, 5, true);
+console.log(cpuNum);

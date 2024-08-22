@@ -18,6 +18,16 @@ function getRandomNum (min, max, isMaxIncluded) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
+/**
+ * verifica se un numero è pari o dispari
+ * @param {number} num 
+ * @returns {'pari'|'dispari'|undefined}
+ */
+function isEvenOrOdd (num) {
+  const numType = num % 2 == 0 ? 'pari' : 'dispari';
+  return numType;
+}
+
 
 /* Palindroma
 Chiedere all’utente di inserire una parola
@@ -79,9 +89,9 @@ console.log(userNum);
 sum = cpuNum + userNum;
 console.log(sum);
 
-// -determino se la proprietà pari o dispari della somma
-let sumType;
-sum % 2 == 0 ? sumType = 'pari' : sumType = 'dispari'
+// -determino se la somma ha la proprietà pari o dispari con la funzione
+// costruita
+sumType = isEvenOrOdd(sum);
 // -determino se vince l'utente verificando se la somma possiede
 // la proprietà stabilita dall'utente
 const winner = userChoice == sumType ? 'utente' : 'CPU';

@@ -37,8 +37,8 @@ console.log(userWord);
 
 // FASE DI ELABORAZIONE
 // -inverto la parola con la funzione mirrorWord e verifico se sia uguale a
-//  quella inserita, poiché questa proprietà definisce una parola
-//  palindroma
+// quella inserita, poiché questa proprietà definisce una parola
+// palindroma
 const mirroredUserWord = mirrorWord (userWord);
 console.log(mirroredUserWord)
 if (mirroredUserWord == userWord) isPalindrome = true;
@@ -58,13 +58,16 @@ Dichiariamo chi ha vinto.
  */
 
 // FASE DI PREPARAZIONE
-// -preparo la giocata del computer sfruttando la funzione precedentemente
-// costruita
+// -preparo la giocata del computer, sfruttando la funzione precedentemente
+// costruita, e la somma per determinare il risultato della partita
 cpuNum = getRandomNum(1, 5, true);
 console.log(cpuNum);
+let sum = 0;
 
 // FASE DI RECUPERO DATI
 // -chiedo all'utente su quale risultato scommette per vincere ed il numero con
 // cui gioca
 const userChoice = prompt('Scegli pari o dispari?').trim();
 const userNum = prompt('Scegli il numero da 1 a cinque con cui vuoi giocare?').trim();
+
+

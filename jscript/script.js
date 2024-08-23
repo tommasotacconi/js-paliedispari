@@ -90,7 +90,7 @@ Stabiliamo se la somma dei due numeri è pari o dispari(usando una funzione)
 Dichiariamo chi ha vinto.
  */
 
-/* // FASE DI PREPARAZIONE
+// FASE DI PREPARAZIONE
 // -preparo la giocata del computer, sfruttando la funzione precedentemente
 // costruita, e la somma per determinare il risultato della partita
 cpuNum = getRandomNum(1, 5, true);
@@ -122,7 +122,7 @@ const winner = userChoice == sumType ? 'utente' : 'CPU';
 // FASE DI PRESENTAZIONE DATI
 // -mostro il vincitore in console
 console.log(winner);
- */
+
 
 
 
